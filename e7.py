@@ -47,16 +47,16 @@ def __target1__():
         target = "http://" + target
     # ip = socket.gethostbyname(target)
     while True:
-        time.sleep(0.1)
-        coun = 1
-        r = requests.get(target)
-        if r.status_code == 404 or r.status_code == 500:
-            print(Fore.YELLOW + "[ " + Fore.RED + coun+ Fore.YELLOW + " ]" + Fore.BLUE + " ~ " + Fore.RED + target )
-            coun += 1
-        if r.status_code == 200:
-            print(Fore.BLUE + "[ " + Fore.GREEN + coun+Fore.BLUE + " ]" + Fore.YELLOW + " ~ " + Fore.REEN + target )
-            coun += 1
-        if coun == 150:
-            time.sleep(1)
-            sys.exit()
+         time.sleep(0.1)
+         coun = 1
+         r = requests.get(target)
+         if r.status_code == 404 or r.status_code == 500:
+             print(Fore.YELLOW + "[ " + Fore.RED + coun+ Fore.YELLOW + " ]" + Fore.BLUE + " ~ " + Fore.RED + target )
+             coun += 1
+         if r.status_code == 200:
+             print(Fore.BLUE + "[ " + Fore.GREEN + coun+Fore.BLUE + " ]" + Fore.YELLOW + " ~ " + Fore.REEN + target )
+             coun += 1
+         if coun == 150:
+             time.sleep(1)
+             sys.exit()
 __target1__()
