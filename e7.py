@@ -2,6 +2,7 @@
 
 import os
 import time
+import requests
 import socket
 import sys
 from colorama import Fore
