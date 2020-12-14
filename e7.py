@@ -54,7 +54,7 @@ def __target1__():
              print(Fore.YELLOW + "[ " + Fore.RED + coun+ Fore.YELLOW + " ]" + Fore.BLUE + " ~ " + Fore.RED + target )
              coun += 1
          if r.status_code == 200:
-             print(Fore.BLUE + "[ " + Fore.GREEN + coun+Fore.BLUE + " ]" + Fore.YELLOW + " ~ " + Fore.REEN + target )
+             print(Fore.BLUE + "[ " + coun + Fore.BLUE + " ]" + Fore.YELLOW + " ~ " + Fore.REEN + target )
              coun += 1
          if coun == 150:
              time.sleep(1)
