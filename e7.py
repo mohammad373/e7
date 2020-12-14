@@ -46,7 +46,7 @@ def __target1__():
     if not "http" in target or not "https" in target :
         target = "http://" + target
     # ip = socket.gethostbyname(target)
-             r = requests.get(target)
+    r = requests.get(target)
     while True:
          coun = 1   
          if r.status_code == 404 or r.status_code == 500:
