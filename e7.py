@@ -54,7 +54,7 @@ def __target1__():
              print(Fore.YELLOW + "[ " , Fore.RED + coun , Fore.YELLOW + " ]" + Fore.BLUE + " ~ " + Fore.RED + target , Fore.RED + time )
              coun += 1
          if r.status_code == 200:
-             print(Fore.BLUE + "[ " ,  coun  ,Fore.BLUE + " ]" +    Fore.BLUE + " ~ " + Fore.GREEN + target +Fore.RED + "  YELLOW  ", time)
+             print(Fore.BLUE + "[ " ,  coun  ,Fore.BLUE + " ]" +    Fore.BLUE + " ~ " + Fore.GREEN + target +Fore.YELLOW + "  ==>  ", time)
              coun += 1
          if coun == 1000000000:
             time.sleep(0.1)
