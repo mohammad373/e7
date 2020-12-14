@@ -48,13 +48,13 @@ def __target1__():
     # ip = socket.gethostbyname(target)
     r = requests.get(target)
     coun = 1
-    time = datetime.datetime.now()
+    time = datetime.datetime.today()
     while True:
          if r.status_code == 404 or r.status_code == 500:
              print(Fore.YELLOW + "[ " , Fore.RED + coun , Fore.YELLOW + " ]" + Fore.BLUE + " ~ " + Fore.RED + target , Fore.RED + time )
              coun += 1
          if r.status_code == 200:
-             print(  coun  ,   Fore.BLUE + " ~ " + Fore.GREEN + target , Fore.GREEN + time)
+             print(  coun  ,    Fore.BLUE + " ~ " + Fore.GREEN + target ,  time)
              coun += 1
          if coun == 10000:
             time.sleep(0.1)
