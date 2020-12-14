@@ -50,14 +50,13 @@ def __target1__():
     coun = 1
     time = datetime.datetime.now()
     while True:
-   
          if r.status_code == 404 or r.status_code == 500:
-             print(Fore.YELLOW + "[ " , Fore.RED + coun , Fore.YELLOW + " ]" + Fore.BLUE + " ~ " + Fore.RED + target )
+             print(Fore.YELLOW + "[ " , Fore.RED + coun , Fore.YELLOW + " ]" + Fore.BLUE + " ~ " + Fore.RED + target , Fore.RED + time )
              coun += 1
          if r.status_code == 200:
-             print(Fore.BLUE + "[ " , Fore.RED + coun ,  Fore.BLUE + " ]" + Fore.BLUE + " ~ " + Fore.GREEN + target , Fore.GREEN + time)
+             print(Fore.BLUE + "[" ,  coun ,  Fore.BLUE + "]" + Fore.BLUE + " ~ " + Fore.GREEN + target , Fore.GREEN + time)
              coun += 1
-         if coun == 10:
+         if coun == 10000:
             time.sleep(0.1)
             sys.exit()
 
